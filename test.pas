@@ -6,4 +6,5 @@ begin
   Readln(sum)
   if (sum = 10) do
     writeln('Hello');
+    writeln(sum);
 end.
