@@ -4,4 +4,6 @@ var
 begin
   writeln('Hello, world!');
   Readln(sum)
+  if (sum = 10) do
+    writeln('Hello');
 end.
