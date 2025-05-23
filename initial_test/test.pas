@@ -7,4 +7,5 @@ begin
   if (sum = 10) then
     writeln('Hello');
     writeln(sum);
+    writeln('Goodbye');
 end.
