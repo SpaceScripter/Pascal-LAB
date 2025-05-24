@@ -33,6 +33,9 @@ DATE=$(date +"%Y-%m-%d")
 
 read -rp "Short summary of changes: " SUMMARY
 
+# New prompt: who pushed the update
+read -rp "Who is pushing this update? " PUSHER
+
 # ──────────────────────────────────────────────────────────────────────────────
 # 2. Gather commits & files changed since the previous tag
 # ──────────────────────────────────────────────────────────────────────────────
@@ -45,7 +48,7 @@ else
 fi
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 3. Generate release notes markdown
+# 3. Generate release notes markdown (with pusher info)
 # ──────────────────────────────────────────────────────────────────────────────
 NOTES_FILE="release-$NEW_TAG.md"
 cat <<EOF > "$NOTES_FILE"
@@ -53,7 +56,8 @@ cat <<EOF > "$NOTES_FILE"
 
 **Release Date:** \`$DATE\`  
 **Tag:** \`$NEW_TAG\`  
-**Status:** ✅ Stable
+**Status:** ✅ Stable  
+**Pushed By:** $PUSHER
 
 ---
 
@@ -110,7 +114,7 @@ if [ ${#FILES_TO_REMOVE[@]} -gt 0 ]; then
   git rm "${FILES_TO_REMOVE[@]}"
 fi
 
-git commit -m "Chore: update release notes for $NEW_TAG (remove old notes)"
+git commit -m "Chore: update release notes for $NEW_TAG by $PUSHER (remove old notes)"
 git push origin main
 echo "✅  Pushed release notes and removed old notes on GitHub"
 
