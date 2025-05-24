@@ -102,3 +102,9 @@ if command -v gh >/dev/null 2>&1; then
 else
   echo "ℹ️  GitHub CLI (gh) not found – skipping automatic Release page"
 fi
+# Commit and push release.md if it exists
+if [ -f release.md ]; then
+  git add release.md
+  git commit -m "Chore: add release notes for $NEW_VERSION"
+  git push origin main
+fi
