@@ -6,7 +6,7 @@
 set -e  # exit immediately on any error
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 1. Find the latest *semantic* tag in the repository (vMAJOR.MINOR.PATCH)
+# 1. Find the latest *semantic* tag in the repository (vMAJOR.MINOR.PATCH) -i wonder what this does
 # ──────────────────────────────────────────────────────────────────────────────
 LATEST_TAG=$(git tag -l 'v*' | sort -V | tail -n 1)   # e.g. v2.1.0
 LATEST_TAG=${LATEST_TAG:-v0.0.0}                      # default if no tags yet
@@ -34,7 +34,7 @@ DATE=$(date +"%Y-%m-%d")
 read -rp "Short summary of changes: " SUMMARY
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 2. Gather commits & files changed since the previous tag
+# 2. Gather commits & files changed since the previous tag lol
 # ──────────────────────────────────────────────────────────────────────────────
 if git rev-parse "v$LATEST_TAG" >/dev/null 2>&1; then
   COMMITS=$(git log "v$LATEST_TAG"..HEAD --oneline)
@@ -45,7 +45,7 @@ else
 fi
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 3. Generate release notes markdown
+# 3. Generate release notes markdown - yes buddy this is the part i like
 # ──────────────────────────────────────────────────────────────────────────────
 NOTES_FILE="release-$NEW_TAG.md"
 cat <<EOF > "$NOTES_FILE"
@@ -87,14 +87,14 @@ EOF
 echo "✅  Release notes written to $NOTES_FILE"
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 4. Tag the repository and push
+# 4. Tag the repository and push -this is what gets the release to github and makes it official and you become a happy :)
 # ──────────────────────────────────────────────────────────────────────────────
 git tag "$NEW_TAG"
 git push origin "$NEW_TAG"
 echo "✅  Pushed tag $NEW_TAG to GitHub"
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 5. Optional – publish a GitHub Release (needs GitHub CLI)
+# 5. Publish a GitHub Release (needs GitHub CLI)- Nobody qill read this but i will
 # ──────────────────────────────────────────────────────────────────────────────
 if command -v gh >/dev/null 2>&1; then
   gh release create "$NEW_TAG" --title "$TITLE" --notes-file "$NOTES_FILE"
