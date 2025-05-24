@@ -8,5 +8,5 @@
     { Program Name: MyProject }
     { Version: 2.0.0 }
     { Description: Addeed the main filing sytem and stared a better taggsing system }
-    { Author: Joshua Samuel }
+    { Author: Your name }
     { Date: 2025-05-24 }
