@@ -10,3 +10,4 @@
     { Description: Addeed the main filing sytem and stared a better taggsing system }
     { Author: Your name }
     { Date: 2025-05-24 }
+// After coding run ./auto-release.sh in the VSCODE terminal to create a new release and push to github.
