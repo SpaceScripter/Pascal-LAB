@@ -1,9 +1,16 @@
 # 🖥️ CSEC IT Lab 2025
 
-Welcome to the **CSEC IT Lab 2025** repository.
+Welcome to the **CSEC IT Lab 2025 - 2026** repository.
 
-This repository contains files, code, and experiments related to the 2025 CSEC Information Technology lab work.  
-It serves as a simple workspace for practice and submissions.
+This repository contains files, code, and experiments related to the 2025 -2026 CSEC Information Technology lab work for HVC.  
+It serves as a simple backup for submissions.
+Done by: 
+-Joshua 
+-Shiva
+-Aadi
+-Gerrard
+-Kemarly
+-Jahmarley
 
 ---
 
