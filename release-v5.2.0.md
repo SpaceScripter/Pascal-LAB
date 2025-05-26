@@ -1,28 +1,28 @@
-### 📦 \e[1mRelease v5.1.0\e[0m
+### 📦 Release v5.2.0
 
 **Release Date:** `2025-05-26`  
-**Tag:** `v5.1.0`  
+**Tag:** `v5.2.0`  
 **Status:** ✅ Stable  
 **Pushed By:** Joshua
 
 ---
 
-### ✨ \e[1mWhat's New\e[0m
-- 🔧 Fun Mode First Test
+### ✨ What's New
+- 🔧 Roll back Fun mode not working yet
 
 ---
 
-### 🧾 \e[1mCommits Since v5.0.0\e[0m
+### 🧾 Commits Since v5.1.0
 - ``
 
 ---
 
-### 📁 \e[1mFiles Affected\e[0m
+### 📁 Files Affected
 - ``
 
 ---
 
-### 🔍 \e[1mHow to Upgrade\e[0m
+### 🔍 How to Upgrade
 ```bash
 git pull origin main
 git fetch --tags
@@ -30,5 +30,5 @@ git fetch --tags
 
 ---
 
-### 🗒️ \e[1mNotes\e[0m
+### 🗒️ Notes
 Open issues/feedback here: <https://github.com/SpaceScripter/Pascal-LAB/issues>
