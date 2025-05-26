@@ -1,6 +1,6 @@
 #!/bin/bash
 # auto-release.sh — semantic-version release helper
-# (c) 2025 SpaceScripter — MIT Licence
+# (c) 2025 SpaceScripter — CC BY-NC 4.0 Licence
 # -------------------------------------------------
 
 set -e  # exit immediately on any error
