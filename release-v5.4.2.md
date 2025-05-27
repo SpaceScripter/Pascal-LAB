@@ -1,9 +1,9 @@
-### 📦 Release v5.4.1
+### 📦 Release v5.4.2
 
 **Release Date:** `2025-05-26`  
-**Tag:** `v5.4.1`  
+**Tag:** `v5.4.2`  
 **Status:** ✅ Stable  
-**Pushed By:** Josh
+**Pushed By:** josh
 
 ---
 
@@ -12,13 +12,13 @@
 
 ---
 
-### 🧾 Commits Since v5.4.0
-- `39e660d Add auto-release script for semantic versioning with Fun Pack features`
+### 🧾 Commits Since v5.4.1
+- `2b0fa20 Add auto-release script for semantic versioning with Fun Pack features`
 
 ---
 
 ### 📁 Files Affected
-- `beta auto release v6.0.0.sh`
+- `beta.sh`
 
 ---
 
