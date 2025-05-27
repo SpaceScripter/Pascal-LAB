@@ -1,19 +1,19 @@
-### 📦 Release v5.4.2
+### 📦 Release v5.5.0
 
 **Release Date:** `2025-05-26`  
-**Tag:** `v5.4.2`  
+**Tag:** `v5.5.0`  
 **Status:** ✅ Stable  
-**Pushed By:** josh
+**Pushed By:** Joshua
 
 ---
 
 ### ✨ What's New
-- 🔧 test
+- 🔧 Bug fixes
 
 ---
 
-### 🧾 Commits Since v5.4.1
-- `2b0fa20 Add auto-release script for semantic versioning with Fun Pack features`
+### 🧾 Commits Since v5.4.2
+- `fb1a520 Chore: remove deprecated beta release script`
 
 ---
 
