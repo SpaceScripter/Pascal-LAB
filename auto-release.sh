@@ -1,5 +1,5 @@
 #!/bin/bash
-# auto-release.sh — semantic-version release helper
+# auto-release.sh — semantic-version release helper with Fun Pack features
 # (c) 2025 SpaceScripter — CC BY-NC 4.0 Licence
 # -------------------------------------------------
 
@@ -11,37 +11,12 @@ set -e  # exit immediately on any error
 VERBOSE=false
 QUIET=false
 
-# Fun Pack flags (all off by default)
-BANNER=false
-QUOTE=false
-CELEBRATE=false
-STYLE=false
-
 for arg in "$@"; do
   case $arg in
     --verbose) VERBOSE=true ;;
     --quiet|--silent) QUIET=true ;;
-    # Fun Pack shortcuts and toggles:
-    --fun)
-      BANNER=true
-      QUOTE=true
-      CELEBRATE=true
-      STYLE=true
-      ;;
-    --banner) BANNER=true ;;
-    --quote) QUOTE=true ;;
-    --celebrate) CELEBRATE=true ;;
-    --style) STYLE=true ;;
   esac
 done
-
-# If quiet, disable fun features
-if $QUIET; then
-  BANNER=false
-  QUOTE=false
-  CELEBRATE=false
-  STYLE=false
-fi
 
 $VERBOSE && set -x
 
@@ -50,34 +25,6 @@ log() {
     echo "$@"
   fi
 }
-
-# ──────────────────────────────────────────────────────────────────────────────
-# 🎨 Fun Pack Feature: Stylized banner output
-# ──────────────────────────────────────────────────────────────────────────────
-if $BANNER; then
-  BANNER_TEXT="🚀 SpaceScripter Auto Release Tool"
-  COLORS=(31 32 33 34 35 36)
-  for ((i = 0; i < ${#BANNER_TEXT}; i++)); do
-    COLOR=${COLORS[$((i % ${#COLORS[@]}))]}
-    printf "\e[1;${COLOR}m${BANNER_TEXT:$i:1}\e[0m"
-    sleep 0.02
-  done
-  echo -e "\n"
-fi
-
-# ──────────────────────────────────────────────────────────────────────────────
-# 🌌 Fun Pack Feature: Quote of the Day (space-themed)
-# ──────────────────────────────────────────────────────────────────────────────
-if $QUOTE; then
-  QUOTES=(
-    "“That’s one small step for man, one giant leap for mankind.” – Neil Armstrong"
-    "“To confine our attention to terrestrial matters would be to limit the human spirit.” – Stephen Hawking"
-    "“Do or do not. There is no try.” – Yoda"
-    "“The Earth is the cradle of humanity, but one cannot live in the cradle forever.” – Tsiolkovsky"
-  )
-  RANDOM_QUOTE=${QUOTES[$((RANDOM % ${#QUOTES[@]}))]}
-  echo -e "\n🌌 \e[1mQuote of the Mission:\e[0m \"$RANDOM_QUOTE\"\n"
-fi
 
 # ──────────────────────────────────────────────────────────────────────────────
 # 1. Find the latest *semantic* tag in the repository (vMAJOR.MINOR.PATCH)
@@ -109,6 +56,36 @@ read -rp "Short summary of changes: " SUMMARY
 read -rp "Who is pushing this update? " PUSHER
 
 # ──────────────────────────────────────────────────────────────────────────────
+# 1.5 Choose Fun Pack features to include
+# ──────────────────────────────────────────────────────────────────────────────
+echo
+log "Select additional Fun Pack features to include (enter numbers separated by spaces):"
+echo "  1) Auto-launch GitHub release page in browser"
+echo "  2) Auto-launch release website (enter URL next)"
+echo "  3) Enable verbose logging (--verbose)"
+echo "  0) None"
+read -rp "Your choices: " FUN_CHOICES
+
+AUTO_LAUNCH_RELEASE_PAGE=false
+AUTO_LAUNCH_WEBSITE=false
+
+for choice in $FUN_CHOICES; do
+  case $choice in
+    1) AUTO_LAUNCH_RELEASE_PAGE=true ;;
+    2) 
+       AUTO_LAUNCH_WEBSITE=true
+       read -rp "Enter the release website URL to auto-launch: " RELEASE_WEBSITE_URL
+       ;;
+    3) 
+       VERBOSE=true
+       set -x
+       ;;
+    0) ;;
+    *) log "Ignoring invalid choice: $choice" ;;
+  esac
+done
+
+# ──────────────────────────────────────────────────────────────────────────────
 # 2. Gather commits & files changed since the previous tag
 # ──────────────────────────────────────────────────────────────────────────────
 if git rev-parse "v$LATEST_TAG" >/dev/null 2>&1; then
@@ -120,52 +97,11 @@ else
 fi
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 3. Generate release notes markdown (with pusher info)
+# 3. Generate release notes markdown (with pusher info) — clean markdown
 # ──────────────────────────────────────────────────────────────────────────────
 NOTES_FILE="release-$NEW_TAG.md"
-
-if $STYLE; then
-  # Stylized headings
-  {
-    echo -e "### 📦 \e[1m$TITLE\e[0m"
-    echo
-    echo -e "**Release Date:** \`$DATE\`  "
-    echo -e "**Tag:** \`$NEW_TAG\`  "
-    echo -e "**Status:** ✅ Stable  "
-    echo -e "**Pushed By:** $PUSHER"
-    echo
-    echo "---"
-    echo
-    echo -e "### ✨ \e[1mWhat's New\e[0m"
-    echo "- 🔧 $SUMMARY"
-    echo
-    echo "---"
-    echo
-    echo -e "### 🧾 \e[1mCommits Since v$LATEST_TAG\e[0m"
-    echo "$COMMITS" | sed 's/^/- `/;s/$/`/'
-    echo
-    echo "---"
-    echo
-    echo -e "### 📁 \e[1mFiles Affected\e[0m"
-    echo "$FILES" | sed 's/^/- `/;s/$/`/'
-    echo
-    echo "---"
-    echo
-    echo -e "### 🔍 \e[1mHow to Upgrade\e[0m"
-    echo '```bash'
-    echo "git pull origin main"
-    echo "git fetch --tags"
-    echo '```'
-    echo
-    echo "---"
-    echo
-    echo -e "### 🗒️ \e[1mNotes\e[0m"
-    echo "Open issues/feedback here: <https://github.com/SpaceScripter/Pascal-LAB/issues>"
-  } > "$NOTES_FILE"
-else
-  # Plain text headings
-  cat <<EOF > "$NOTES_FILE"
-### 📦 $TITLE
+cat <<EOF > "$NOTES_FILE"
+# 📦 Release $NEW_TAG
 
 **Release Date:** \`$DATE\`  
 **Tag:** \`$NEW_TAG\`  
@@ -174,22 +110,26 @@ else
 
 ---
 
-### ✨ What's New
+## ✨ What's New
 - 🔧 $SUMMARY
 
 ---
 
-### 🧾 Commits Since v$LATEST_TAG
-$(echo "$COMMITS" | sed 's/^/- `/;s/$/`/')
+## 🧾 Commits Since v$LATEST_TAG
+\`\`\`
+$COMMITS
+\`\`\`
 
 ---
 
-### 📁 Files Affected
-$(echo "$FILES" | sed 's/^/- `/;s/$/`/')
+## 📁 Files Affected
+\`\`\`
+$FILES
+\`\`\`
 
 ---
 
-### 🔍 How to Upgrade
+## 🔍 How to Upgrade
 \`\`\`bash
 git pull origin main
 git fetch --tags
@@ -197,10 +137,9 @@ git fetch --tags
 
 ---
 
-### 🗒️ Notes
+## 🗒️ Notes
 Open issues/feedback here: <https://github.com/SpaceScripter/Pascal-LAB/issues>
 EOF
-fi
 
 log "✅  Release notes written to $NOTES_FILE"
 
@@ -240,27 +179,21 @@ git push origin "$NEW_TAG"
 log "✅  Pushed tag $NEW_TAG to GitHub"
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 7. Create GitHub Release page if gh CLI is installed
+# 7. Optional: Auto-launch GitHub Release page
 # ──────────────────────────────────────────────────────────────────────────────
-if command -v gh >/dev/null 2>&1; then
-  gh release create "$NEW_TAG" --title "$TITLE" --notes-file "$NOTES_FILE"
-  log "✅  GitHub Release page created"
-
-  # ──────────────────────────────────────────────────────────────────────────────
-  # 🎉 Fun Pack Feature: Celebration message after release
-  # ──────────────────────────────────────────────────────────────────────────────
-  if $CELEBRATE; then
-    echo -e "\n🚀 Mission Accomplished, Commander!"
-    echo -e "🎉 New version \e[1m$NEW_TAG\e[0m has launched into the GitHub galaxy!\n"
-  fi
-
-  # ──────────────────────────────────────────────────────────────────────────────
-  # 8. Launch GitHub release page in default browser
-  # ──────────────────────────────────────────────────────────────────────────────
+if $AUTO_LAUNCH_RELEASE_PAGE; then
   REPO_URL=$(git config --get remote.origin.url | sed -E 's/\.git$//' | sed -E 's/git@github\.com:/https:\/\/github.com\//')
   RELEASE_URL="$REPO_URL/releases/tag/$NEW_TAG"
-  log "🌐 Opening $RELEASE_URL"
+  log "🌐 Opening GitHub Release page: $RELEASE_URL"
   open "$RELEASE_URL" 2>/dev/null || xdg-open "$RELEASE_URL" 2>/dev/null || log "⚠️ Could not auto-open browser."
-else
-  log "ℹ️  GitHub CLI (gh) not found – skipping automatic Release page"
 fi
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 8. Optional: Auto-launch release website URL
+# ──────────────────────────────────────────────────────────────────────────────
+if $AUTO_LAUNCH_WEBSITE; then
+  log "🌐 Opening release website URL: $RELEASE_WEBSITE_URL"
+  open "$RELEASE_WEBSITE_URL" 2>/dev/null || xdg-open "$RELEASE_WEBSITE_URL" 2>/dev/null || log "⚠️ Could not auto-open release website."
+fi
+
+log "🎉 Release $NEW_TAG complete!"

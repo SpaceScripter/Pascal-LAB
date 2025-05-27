@@ -1,44 +1,32 @@
-# auto-release.sh Features & Command Line Options
+# Auto Release Script v5.3.0
 
-This document summarizes all the command-line options available in the `auto-release.sh` release helper script, including verbosity controls and fun pack features.
-
----
-
-## Core Flags
-
-| Flag           | Description                                                     |
-|----------------|-----------------------------------------------------------------|
-| `--verbose`    | Enables verbose mode: shows detailed command execution output   |
-|                | (`set -x` shell option enabled)                                 |
-| `--quiet` or `--silent` | Disables all script output including fun features       |
-|                | Runs the script silently for clean execution                    |
+Semantic versioning release helper script with optional Fun Pack features and improved logging.
 
 ---
 
-## Fun Pack Features & Commands
+## Features
 
-| Feature               | Description                                               | Command Line Option(s)          |
-|-----------------------|-----------------------------------------------------------|--------------------------------|
-| 🎨 **Stylized Banner** | Displays a colorful animated banner at script start       | `--banner`                     |
-|                       | Enables a rainbow-colored banner animation                 |                                |
-|                       |                                                             |                                |
-| 🌌 **Quote of the Day**| Shows a random space-themed inspirational quote            | `--quote`                      |
-|                       | Prints a random motivational quote about space/science     |                                |
-|                       |                                                             |                                |
-| 🎉 **Celebrate Release** | Prints a fun celebration message after a successful release | `--celebrate`                  |
-|                       | Shows congratulatory emojis and new version number         |                                |
-|                       |                                                             |                                |
-| ✍️ **Stylized Markdown** | Adds color and emoji formatting to release notes          | `--style`                     |
-|                       | Produces visually enhanced markdown for better readability |                                |
-|                       |                                                             |                                |
-| ⚡ **All Fun Features**  | Enables all fun pack features at once                     | `--fun`                        |
-|                       | Shortcut to turn on banner, quote, celebrate, and style    |                                |
+- **Semantic version detection**: Automatically find last `vMAJOR.MINOR.PATCH` tag and increment based on your choice (Patch, Minor, Major).
+- **Interactive release notes**: Prompts for short summary and pusher name.
+- **Auto-generated Markdown release notes** with:
+  - Release info (version, date, pusher)
+  - Commit list since last release
+  - Files changed since last release
+  - Upgrade instructions
+  - Notes with GitHub issues link
+- **Old release notes cleanup**: Automatically removes previous release notes files.
+- **Git commit & push**: Adds new notes, removes old ones, commits, tags, and pushes to remote.
+- **Fun Pack features** (selectable):
+  - Auto-launch GitHub release page after pushing
+  - Auto-launch custom release website URL after pushing
+  - Verbose bash output logging
+- **Flexible logging**:
+  - `--verbose` for detailed command tracing
+  - `--quiet` or `--silent` for minimal output
 
 ---
 
-## Usage Examples
+## Usage
 
-- Enable verbose output with all fun features:
-
-  ```bash
-  ./auto-release.sh --verbose --fun
+```bash
+./auto-release.sh [--verbose] [--quiet|--silent]
