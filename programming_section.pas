@@ -8,6 +8,7 @@ Var
   alphaTrack, alphaField, betaTrack, betaField, deltaTrack, deltaField, gammaTrack, gammaField: Real;
 
 Begin
+
   ClrScr;
   alphaTrack := 0;
   alphaField := 0;
@@ -23,7 +24,7 @@ Begin
   Writeln('══════════════════════════════════════════════');
   Writeln;
 
-  For x := 1 To 12 Do
+  For x := 1 To 1 Do
   Begin
     Writeln('─[ Registering Student ', x, ' of 12 ]─');
 
@@ -88,28 +89,28 @@ Begin
   Writeln('═════════════════════════════════════════════════');
 
   Writeln;
-  Writeln('» ALPHA HOUSE');
-  Writeln('  Track Athletes: ', Trunc(alphaTrack / 50):2);
-  Writeln(' | Field Athletes: ', Trunc(alphaField / 40):2);
-  Writeln(' | Total: $', alphaTrack + alphaField:0:2);
+  Writeln('  ALPHA HOUSE');
+  Writeln('  Track Athletes: ', Trunc(alphaTrack / 50));
+  Writeln('  Field Athletes: ', Trunc(alphaField / 40));
+  Writeln('  Total: $', alphaTrack + alphaField:0:2);
 
   Writeln;
-  Writeln('» BETA HOUSE');
-  Writeln('  Track Athletes: ', Trunc(betaTrack / 50):2);
-  Writeln(' | Field Athletes: ', Trunc(betaField / 40):2);
-  Writeln(' | Total: $', betaTrack + betaField:0:2);
+  Writeln('  BETA HOUSE');
+  Writeln('  Track Athletes: ', Trunc(betaTrack / 50));
+  Writeln('  Field Athletes: ', Trunc(betaField / 40));
+  Writeln('  Total: $', betaTrack + betaField:0:2);
 
   Writeln;
-  Writeln('» DELTA HOUSE');
-  Writeln('  Track Athletes: ', Trunc(deltaTrack / 50):2);
-  Writeln(' | Field Athletes: ', Trunc(deltaField / 40):2);
-  Writeln(' | Total: $', deltaTrack + deltaField:0:2);
+  Writeln('  DELTA HOUSE');
+  Writeln('  Track Athletes: ', Trunc(deltaTrack / 50));
+  Writeln('  Field Athletes: ', Trunc(deltaField / 40));
+  Writeln('  Total: $', deltaTrack + deltaField:0:2);
 
   Writeln;
-  Writeln('» GAMMA HOUSE');
-  Writeln('  Track Athletes: ', Trunc(gammaTrack / 50):2);
-  Writeln(' | Field Athletes: ', Trunc(gammaField / 40):2);
-  Writeln(' | Total: $', gammaTrack + gammaField:0:2);
+  Writeln('  GAMMA HOUSE');
+  Writeln('  Track Athletes: ', Trunc(gammaTrack / 50));
+  Writeln('  Field Athletes: ', Trunc(gammaField / 40));
+  Writeln('  Total: $', gammaTrack + gammaField:0:2);
 
   Writeln('───────────────────────────────────────────────');
   Writeln('     Thank you for using the system. Goodbye!   ');
