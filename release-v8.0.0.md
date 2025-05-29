@@ -1,23 +1,25 @@
-### 📦 Release v7.0.0
+### 📦 Release v8.0.0
 
-**Release Date:** `2025-05-28`  
-**Tag:** `v7.0.0`  
+**Release Date:** `2025-05-29`  
+**Tag:** `v8.0.0`  
 **Status:** ✅ Stable  
 **Pushed By:** Joshua
 
 ---
 
 ### ✨ What's New
-- 🔧 Final Pascal Code kinda
+- 🔧 Complete System Update
 
 ---
 
-### 🧾 Commits Since v6.0.0
-- `13781d0 Final version`
+### 🧾 Commits Since v7.0.0
+- `feb98a4 Refactor: simplify output formatting and adjust loop for student registration and added sba pdf did a complete sytem cleanup`
 
 ---
 
 ### 📁 Files Affected
+- `Formatting System.pas`
+- `SBA.pdf`
 - `programming_section`
 - `programming_section.o`
 - `programming_section.pas`
