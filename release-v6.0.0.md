@@ -1,24 +1,26 @@
-### 📦 Release v5.5.0
+### 📦 Release v6.0.0
 
-**Release Date:** `2025-05-26`  
-**Tag:** `v5.5.0`  
+**Release Date:** `2025-05-28`  
+**Tag:** `v6.0.0`  
 **Status:** ✅ Stable  
 **Pushed By:** Joshua
 
 ---
 
 ### ✨ What's New
-- 🔧 Bug fixes
+- 🔧 Random actual SBA Start
 
 ---
 
-### 🧾 Commits Since v5.4.2
-- `fb1a520 Chore: remove deprecated beta release script`
+### 🧾 Commits Since v5.5.0
+- `819c64f random update lol`
 
 ---
 
 ### 📁 Files Affected
-- `beta.sh`
+- `programming_section`
+- `programming_section.o`
+- `programming_section.pas`
 
 ---
 
