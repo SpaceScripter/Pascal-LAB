@@ -3,7 +3,7 @@ Program Alligator;
 Uses Crt;
 
 Var
-  x: Integer;
+  x, houseChoice, regChoice: Integer;
   id, name, house, regType: String;
   alphaTrack, alphaField, betaTrack, betaField, deltaTrack, deltaField, gammaTrack, gammaField: Real;
 
@@ -34,17 +34,37 @@ Begin
     Write('Enter Full Name: ');
     Readln(name);
 
+    // House Selection Menu
     Repeat
-      Write('Enter House (Alpha, Beta, Delta, Gamma): ');
-      Readln(house);
-      house := Upcase(house);
-    Until (house = 'ALPHA') Or (house = 'BETA') Or (house = 'DELTA') Or (house = 'GAMMA');
+      Writeln('Select House:');
+      Writeln('  1. Alpha');
+      Writeln('  2. Beta');
+      Writeln('  3. Delta');
+      Writeln('  4. Gamma');
+      Write('Enter choice (1-4): ');
+      Readln(houseChoice);
+    Until (houseChoice >= 1) And (houseChoice <= 4);
 
+    Case houseChoice Of
+      1: house := 'ALPHA';
+      2: house := 'BETA';
+      3: house := 'DELTA';
+      4: house := 'GAMMA';
+    End;
+
+    // Registration Type Menu
     Repeat
-      Write('Enter Registration Type (Track or Field): ');
-      Readln(regType);
-      regType := Upcase(regType);
-    Until (regType = 'TRACK') Or (regType = 'FIELD');
+      Writeln('Select Registration Type:');
+      Writeln('  1. Track');
+      Writeln('  2. Field');
+      Write('Enter choice (1-2): ');
+      Readln(regChoice);
+    Until (regChoice = 1) Or (regChoice = 2);
+
+    Case regChoice Of
+      1: regType := 'TRACK';
+      2: regType := 'FIELD';
+    End;
 
     if house = 'ALPHA' Then
     Begin
