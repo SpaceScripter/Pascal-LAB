@@ -19,9 +19,9 @@ Begin
   gammaTrack := 0;
   gammaField := 0; 
 
-  Writeln('══════════════════════════════════════════════');
+  Writeln('-------------------------------------------------');
   Writeln('     Welcome to the Sports Registration       ');
-  Writeln('══════════════════════════════════════════════');
+  Writeln('-------------------------------------------------');
   Writeln;
 
   For x := 1 To 12 Do
@@ -100,14 +100,14 @@ Begin
     Writeln('  Name : ', name);
     Writeln('  House: ', house);
     ClrScr;
-    Writeln('───────────────────────────────────────────────');
+    Writeln('-------------------------------------------------');
     Writeln;
   End;
 
   Writeln;
-  Writeln('═════════════════════════════════════════════════');
+  Writeln('-------------------------------------------------');
   Writeln('           FINAL REGISTRATION SUMMARY            ');
-  Writeln('═════════════════════════════════════════════════');
+  Writeln('-------------------------------------------------');
 
   Writeln;
   Writeln('  ALPHA HOUSE');
@@ -133,8 +133,8 @@ Begin
   Writeln('  Field Athletes: ', Trunc(gammaField / 40));
   Writeln('  Total: $', gammaTrack + gammaField:0:2);
 
-  Writeln('───────────────────────────────────────────────');
-  Writeln('     Thank you for using the system. Goodbye!   ');
-  Writeln('───────────────────────────────────────────────');
+  Writeln('-------------------------------------------------');
+  Writeln('      Thank you for using the system. Goodbye!   ');
+  Writeln('-------------------------------------------------');
   Readln;
 End.
