@@ -12,10 +12,14 @@ Var
 
 Begin
   ClrScr;
-  alphaTrack := 0; alphaField := 0;
-  betaTrack := 0; betaField := 0;
-  deltaTrack := 0; deltaField := 0;
-  gammaTrack := 0; gammaField := 0;
+  alphaTrack := 0; 
+  alphaField := 0;
+  betaTrack := 0; 
+  betaField := 0;
+  deltaTrack := 0; 
+  deltaField := 0;
+  gammaTrack := 0; 
+  gammaField := 0;
 
   Writeln('-------------------------------------------------');
   Writeln('     Welcome to the Sports Registration       ');
@@ -32,7 +36,7 @@ Begin
     Write('Enter Full Name: ');
     Readln(name);
 
-    // House Selection
+    {House Selection}
     Repeat
       Writeln('Select House:');
       Writeln('  1. Alpha');
@@ -50,7 +54,7 @@ Begin
       4: house := 'GAMMA';
     End;
 
-    // Registration Type
+    {Registration Type}
     Repeat
       Writeln('Select Registration Type:');
       Writeln('  1. Track');
@@ -64,7 +68,7 @@ Begin
       2: regType := 'FIELD';
     End;
 
-    // Update house totals
+    {Update house totals}
     If (house = 'ALPHA') Then
     Begin
       If (regType = 'TRACK') Then
@@ -103,13 +107,13 @@ Begin
     Writeln;
   End;
 
-  // Compute Totals
+  {Compute Totals}
   totalAlpha := alphaTrack + alphaField;
   totalBeta := betaTrack + betaField;
   totalDelta := deltaTrack + deltaField;
   totalGamma := gammaTrack + gammaField;
 
-  // Summary
+  {Summary}
   Writeln;
   Writeln('-------------------------------------------------');
   Writeln('           FINAL REGISTRATION SUMMARY            ');
