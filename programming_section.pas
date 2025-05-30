@@ -5,19 +5,16 @@ Uses Crt;
 Var
   x, houseChoice, regChoice: Integer;
   id, name, house, regType: String;
-  alphaTrack, alphaField, betaTrack, betaField, deltaTrack, deltaField, gammaTrack, gammaField: Real;
+  alphaTrack, alphaField, betaTrack, betaField: Real;
+  deltaTrack, deltaField, gammaTrack, gammaField: Real;
+  totalAlpha, totalBeta, totalDelta, totalGamma: Real;
 
 Begin
-
   ClrScr;
-  alphaTrack := 0;
-  alphaField := 0;
-  betaTrack := 0;
-  betaField := 0;
-  deltaTrack := 0;
-  deltaField := 0;
-  gammaTrack := 0;
-  gammaField := 0; 
+  alphaTrack := 0; alphaField := 0;
+  betaTrack := 0; betaField := 0;
+  deltaTrack := 0; deltaField := 0;
+  gammaTrack := 0; gammaField := 0;
 
   Writeln('-------------------------------------------------');
   Writeln('     Welcome to the Sports Registration       ');
@@ -34,7 +31,7 @@ Begin
     Write('Enter Full Name: ');
     Readln(name);
 
-    // House Selection Menu
+    // House Selection
     Repeat
       Writeln('Select House:');
       Writeln('  1. Alpha');
@@ -43,7 +40,7 @@ Begin
       Writeln('  4. Gamma');
       Write('Enter choice (1-4): ');
       Readln(houseChoice);
-    Until (houseChoice >= 1) And (houseChoice <= 4);
+    Until ((houseChoice >= 1) And (houseChoice <= 4));
 
     Case houseChoice Of
       1: house := 'ALPHA';
@@ -52,44 +49,45 @@ Begin
       4: house := 'GAMMA';
     End;
 
-    // Registration Type Menu
+    // Registration Type
     Repeat
       Writeln('Select Registration Type:');
       Writeln('  1. Track');
       Writeln('  2. Field');
       Write('Enter choice (1-2): ');
       Readln(regChoice);
-    Until (regChoice = 1) Or (regChoice = 2);
+    Until ((regChoice = 1) Or (regChoice = 2));
 
     Case regChoice Of
       1: regType := 'TRACK';
       2: regType := 'FIELD';
     End;
 
-    if house = 'ALPHA' Then
+    // Update house totals
+    If (house = 'ALPHA') Then
     Begin
-      if regType = 'TRACK' Then
+      If (regType = 'TRACK') Then
         alphaTrack := alphaTrack + 50
       Else
         alphaField := alphaField + 40;
     End
-    Else if house = 'BETA' Then
+    Else If (house = 'BETA') Then
     Begin
-      if regType = 'TRACK' Then
+      If (regType = 'TRACK') Then
         betaTrack := betaTrack + 50
       Else
         betaField := betaField + 40;
     End
-    Else if house = 'DELTA' Then
+    Else If (house = 'DELTA') Then
     Begin
-      if regType = 'TRACK' Then
+      If (regType = 'TRACK') Then
         deltaTrack := deltaTrack + 50
       Else
         deltaField := deltaField + 40;
     End
-    Else if house = 'GAMMA' Then
+    Else If (house = 'GAMMA') Then
     Begin
-      if regType = 'TRACK' Then
+      If (regType = 'TRACK') Then
         gammaTrack := gammaTrack + 50
       Else
         gammaField := gammaField + 40;
@@ -104,6 +102,13 @@ Begin
     Writeln;
   End;
 
+  // Compute Totals
+  totalAlpha := alphaTrack + alphaField;
+  totalBeta := betaTrack + betaField;
+  totalDelta := deltaTrack + deltaField;
+  totalGamma := gammaTrack + gammaField;
+
+  // Summary
   Writeln;
   Writeln('-------------------------------------------------');
   Writeln('           FINAL REGISTRATION SUMMARY            ');
@@ -113,25 +118,29 @@ Begin
   Writeln('  ALPHA HOUSE');
   Writeln('  Track Athletes: ', Trunc(alphaTrack / 50));
   Writeln('  Field Athletes: ', Trunc(alphaField / 40));
-  Writeln('  Total: $', alphaTrack + alphaField:0:2);
+  Writeln('  Total: $', totalAlpha:0:2);
+  Writeln('-------------------------------------------------');
 
   Writeln;
   Writeln('  BETA HOUSE');
   Writeln('  Track Athletes: ', Trunc(betaTrack / 50));
   Writeln('  Field Athletes: ', Trunc(betaField / 40));
-  Writeln('  Total: $', betaTrack + betaField:0:2);
+  Writeln('  Total: $', totalBeta:0:2);
+  Writeln('-------------------------------------------------');
 
   Writeln;
   Writeln('  DELTA HOUSE');
   Writeln('  Track Athletes: ', Trunc(deltaTrack / 50));
   Writeln('  Field Athletes: ', Trunc(deltaField / 40));
-  Writeln('  Total: $', deltaTrack + deltaField:0:2);
+  Writeln('  Total: $', totalDelta:0:2);
+  Writeln('-------------------------------------------------');
 
   Writeln;
   Writeln('  GAMMA HOUSE');
   Writeln('  Track Athletes: ', Trunc(gammaTrack / 50));
   Writeln('  Field Athletes: ', Trunc(gammaField / 40));
-  Writeln('  Total: $', gammaTrack + gammaField:0:2);
+  Writeln('  Total: $', totalGamma:0:2);
+  Writeln('-------------------------------------------------');
 
   Writeln('-------------------------------------------------');
   Writeln('      Thank you for using the system. Goodbye!   ');
