@@ -1,25 +1,23 @@
-### 📦 Release v8.0.0
+### 📦 Release v8.0.1
 
-**Release Date:** `2025-05-29`  
-**Tag:** `v8.0.0`  
+**Release Date:** `2025-05-30`  
+**Tag:** `v8.0.1`  
 **Status:** ✅ Stable  
 **Pushed By:** Joshua
 
 ---
 
 ### ✨ What's New
-- 🔧 Complete System Update
+- 🔧 Loop fixes
 
 ---
 
-### 🧾 Commits Since v7.0.0
-- `feb98a4 Refactor: simplify output formatting and adjust loop for student registration and added sba pdf did a complete sytem cleanup`
+### 🧾 Commits Since v8.0.0
+- `97e600c Chore: update binary files for programming_section and programming_section.o`
 
 ---
 
 ### 📁 Files Affected
-- `Formatting System.pas`
-- `SBA.pdf`
 - `programming_section`
 - `programming_section.o`
 - `programming_section.pas`
