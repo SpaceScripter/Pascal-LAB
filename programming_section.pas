@@ -16,144 +16,144 @@ Var
   totalAlpha, totalBeta, totalDelta, totalGamma: Real;
 
 Begin
-  ClrScr;
-  alphaTrack := 0; 
-  alphaField := 0;
-  betaTrack := 0; 
-  betaField := 0;
-  deltaTrack := 0; 
-  deltaField := 0;
-  gammaTrack := 0; 
-  gammaField := 0;
+  {1} ClrScr;
+  {2} alphaTrack := 0; 
+  {3} alphaField := 0;
+  {4} betaTrack := 0; 
+  {5} betaField := 0;
+  {6} deltaTrack := 0; 
+  {7} deltaField := 0;
+  {8} gammaTrack := 0; 
+  {9} gammaField := 0;
 
-  Writeln('-------------------------------------------------');
-  Writeln('     Welcome to the Sports Registration       ');
-  Writeln('-------------------------------------------------');
-  Writeln;
+  {10} Writeln('-------------------------------------------------');
+  {11} Writeln('     Welcome to the Sports Registration       ');
+  {12} Writeln('-------------------------------------------------');
+  {13} Writeln;
 
-  For x := 1 To 12 Do
+  {14} For x := 1 To 12 Do
   Begin
-    Writeln('─[ Registering Student ', x, ' of 12 ]─');
+    {15} Writeln('─[ Registering Student ', x, ' of 12 ]─');
 
-    Write('Enter Student ID: ');
-    Readln(id);
+    {16} Write('Enter Student ID: ');
+    {17} Readln(id);
 
-    Write('Enter Full Name: ');
-    Readln(name);
+    {18} Write('Enter Full Name: ');
+    {19} Readln(name);
 
     {House Selection}
     Repeat
-      Writeln('Select House:');
-      Writeln('  1. Alpha');
-      Writeln('  2. Beta');
-      Writeln('  3. Delta');
-      Writeln('  4. Gamma');
-      Write('Enter choice (1-4): ');
-      Readln(houseChoice);
-    Until ((houseChoice >= 1) And (houseChoice <= 4));
+      {20} Writeln('Select House:');
+      {21} Writeln('  1. Alpha');
+      {22} Writeln('  2. Beta');
+      {23} Writeln('  3. Delta');
+      {24} Writeln('  4. Gamma');
+      {25} Write('Enter choice (1-4): ');
+      {26} Readln(houseChoice);
+    {27} Until ((houseChoice >= 1) And (houseChoice <= 4));
 
-    Case houseChoice Of
-      1: house := 'ALPHA';
-      2: house := 'BETA';
-      3: house := 'DELTA';
-      4: house := 'GAMMA';
+    {28} Case houseChoice Of
+      {29} 1: house := 'ALPHA';
+      {30} 2: house := 'BETA';
+      {31} 3: house := 'DELTA';
+      {32} 4: house := 'GAMMA';
     End;
 
     {Registration Type}
     Repeat
-      Writeln('Select Registration Type:');
-      Writeln('  1. Track');
-      Writeln('  2. Field');
-      Write('Enter choice (1-2): ');
-      Readln(regChoice);
-    Until ((regChoice = 1) Or (regChoice = 2));
+      {33} Writeln('Select Registration Type:');
+      {34} Writeln('  1. Track');
+      {35} Writeln('  2. Field');
+      {36} Write('Enter choice (1-2): ');
+      {37} Readln(regChoice);
+    {38} Until ((regChoice = 1) Or (regChoice = 2));
 
-    Case regChoice Of
-      1: regType := 'TRACK';
-      2: regType := 'FIELD';
+    {39} Case regChoice Of
+      {40} 1: regType := 'TRACK';
+      {41} 2: regType := 'FIELD';
     End;
 
     {Update house totals}
-    If (house = 'ALPHA') Then
+    {42} If (house = 'ALPHA') Then
     Begin
-      If (regType = 'TRACK') Then
-        alphaTrack := alphaTrack + 50
+      {43} If (regType = 'TRACK') Then
+        {44} alphaTrack := alphaTrack + 50
       Else
-        alphaField := alphaField + 40;
+        {45} alphaField := alphaField + 40;
     End
-    Else If (house = 'BETA') Then
+    {46} Else If (house = 'BETA') Then
     Begin
-      If (regType = 'TRACK') Then
-        betaTrack := betaTrack + 50
+      {47} If (regType = 'TRACK') Then
+        {48} betaTrack := betaTrack + 50
       Else
-        betaField := betaField + 40;
+        {49} betaField := betaField + 40;
     End
-    Else If (house = 'DELTA') Then
+    {50} Else If (house = 'DELTA') Then
     Begin
-      If (regType = 'TRACK') Then
-        deltaTrack := deltaTrack + 50
+      {51} If (regType = 'TRACK') Then
+        {52} deltaTrack := deltaTrack + 50
       Else
-        deltaField := deltaField + 40;
+        {53} deltaField := deltaField + 40;
     End
-    Else If (house = 'GAMMA') Then
+    {54} Else If (house = 'GAMMA') Then
     Begin
-      If (regType = 'TRACK') Then
-        gammaTrack := gammaTrack + 50
+      {55} If (regType = 'TRACK') Then
+        {56} gammaTrack := gammaTrack + 50
       Else
-        gammaField := gammaField + 40;
+        {57} gammaField := gammaField + 40;
     End;
 
-    Writeln;
-    Writeln(' Registration Successful!');
-    Writeln('  Name : ', name);
-    Writeln('  House: ', house);
-    ClrScr;
-    Writeln('-------------------------------------------------');
-    Writeln;
+    {58} Writeln;
+    {59} Writeln(' Registration Successful!');
+    {60} Writeln('  Name : ', name);
+    {61} Writeln('  House: ', house);
+    {62} ClrScr;
+    {63} Writeln('-------------------------------------------------');
+    {64} Writeln;
   End;
 
   {Compute Totals}
-  totalAlpha := alphaTrack + alphaField;
-  totalBeta := betaTrack + betaField;
-  totalDelta := deltaTrack + deltaField;
-  totalGamma := gammaTrack + gammaField;
+  {65} totalAlpha := alphaTrack + alphaField;
+  {66} totalBeta := betaTrack + betaField;
+  {67} totalDelta := deltaTrack + deltaField;
+  {68} totalGamma := gammaTrack + gammaField;
 
   {Summary}
-  Writeln;
-  Writeln('-------------------------------------------------');
-  Writeln('           FINAL REGISTRATION SUMMARY            ');
-  Writeln('-------------------------------------------------');
+  {69} Writeln;
+  {70} Writeln('-------------------------------------------------');
+  {71} Writeln('           FINAL REGISTRATION SUMMARY            ');
+  {72} Writeln('-------------------------------------------------');
 
-  Writeln;
-  Writeln('  ALPHA HOUSE');
-  Writeln('  Track Athletes: ', Trunc(alphaTrack / 50));
-  Writeln('  Field Athletes: ', Trunc(alphaField / 40));
-  Writeln('  Total: $', totalAlpha:0:2);
-  Writeln('-------------------------------------------------');
+  {73} Writeln;
+  {74} Writeln('  ALPHA HOUSE');
+  {75} Writeln('  Track Athletes: ', Trunc(alphaTrack / 50));
+  {76} Writeln('  Field Athletes: ', Trunc(alphaField / 40));
+  {77} Writeln('  Total: $', totalAlpha:0:2);
+  {78} Writeln('-------------------------------------------------');
 
-  Writeln;
-  Writeln('  BETA HOUSE');
-  Writeln('  Track Athletes: ', Trunc(betaTrack / 50));
-  Writeln('  Field Athletes: ', Trunc(betaField / 40));
-  Writeln('  Total: $', totalBeta:0:2);
-  Writeln('-------------------------------------------------');
+  {79} Writeln;
+  {80} Writeln('  BETA HOUSE');
+  {81} Writeln('  Track Athletes: ', Trunc(betaTrack / 50));
+  {82} Writeln('  Field Athletes: ', Trunc(betaField / 40));
+  {83} Writeln('  Total: $', totalBeta:0:2);
+  {84} Writeln('-------------------------------------------------');
 
-  Writeln;
-  Writeln('  DELTA HOUSE');
-  Writeln('  Track Athletes: ', Trunc(deltaTrack / 50));
-  Writeln('  Field Athletes: ', Trunc(deltaField / 40));
-  Writeln('  Total: $', totalDelta:0:2);
-  Writeln('-------------------------------------------------');
+  {85} Writeln;
+  {86} Writeln('  DELTA HOUSE');
+  {87} Writeln('  Track Athletes: ', Trunc(deltaTrack / 50));
+  {88} Writeln('  Field Athletes: ', Trunc(deltaField / 40));
+  {89} Writeln('  Total: $', totalDelta:0:2);
+  {90} Writeln('-------------------------------------------------');
 
-  Writeln;
-  Writeln('  GAMMA HOUSE');
-  Writeln('  Track Athletes: ', Trunc(gammaTrack / 50));
-  Writeln('  Field Athletes: ', Trunc(gammaField / 40));
-  Writeln('  Total: $', totalGamma:0:2);
-  Writeln('-------------------------------------------------');
+  {91} Writeln;
+  {92} Writeln('  GAMMA HOUSE');
+  {93} Writeln('  Track Athletes: ', Trunc(gammaTrack / 50));
+  {94} Writeln('  Field Athletes: ', Trunc(gammaField / 40));
+  {95} Writeln('  Total: $', totalGamma:0:2);
+  {96} Writeln('-------------------------------------------------');
 
-  Writeln('-------------------------------------------------');
-  Writeln('      Thank you for using the system. Goodbye!   ');
-  Writeln('-------------------------------------------------');
-  Readln;
+  {97} Writeln('-------------------------------------------------');
+  {98} Writeln('      Thank you for using the system. Goodbye!   ');
+  {99} Writeln('-------------------------------------------------');
+  {100} Readln;
 End.
