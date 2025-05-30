@@ -1,4 +1,5 @@
-Program Alligator;
+Program SportsRegistrationSystem;
+
 
 Uses Crt;
 
