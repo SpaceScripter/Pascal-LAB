@@ -1,5 +1,4 @@
-Program SportsRegistrationSystem;
-
+Program Sports_Registration_System;
 
 Uses Crt;
 
