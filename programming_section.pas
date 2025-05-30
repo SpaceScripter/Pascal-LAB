@@ -99,6 +99,7 @@ Begin
     Writeln(' Registration Successful!');
     Writeln('  Name : ', name);
     Writeln('  House: ', house);
+    ClrScr;
     Writeln('───────────────────────────────────────────────');
     Writeln;
   End;
