@@ -1,19 +1,19 @@
-### 📦 Release v8.2.1
+### 📦 Release v8.3.0
 
 **Release Date:** `2025-05-30`  
-**Tag:** `v8.2.1`  
+**Tag:** `v8.3.0`  
 **Status:** ✅ Stable  
 **Pushed By:** Joshua
 
 ---
 
 ### ✨ What's New
-- 🔧 ASCII art removed
+- 🔧 Bug fixes
 
 ---
 
-### 🧾 Commits Since v8.2.0
-- `816cac1 Refactor: standardize output formatting in registration summary`
+### 🧾 Commits Since v8.2.1
+- `148d25c Refactor: streamline variable initialization and improve total calculations in registration summary`
 
 ---
 
