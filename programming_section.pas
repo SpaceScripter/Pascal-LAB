@@ -1,3 +1,8 @@
+{Authors: Joshua Samuel, Shiva Beharry, Aadi
+  Date: 2023-10-01
+  Description: A simple sports registration system for a school.
+  This program allows students to register for sports in different houses and types.}
+
 Program SportsRegistrationSystem;
 
 
