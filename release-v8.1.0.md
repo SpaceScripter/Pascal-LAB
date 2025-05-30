@@ -1,25 +1,23 @@
-### 📦 Release v8.0.1
+### 📦 Release v8.1.0
 
 **Release Date:** `2025-05-30`  
-**Tag:** `v8.0.1`  
+**Tag:** `v8.1.0`  
 **Status:** ✅ Stable  
 **Pushed By:** Joshua
 
 ---
 
 ### ✨ What's New
-- 🔧 Loop fixes
+- 🔧 Menu Selection System
 
 ---
 
-### 🧾 Commits Since v8.0.0
-- `97e600c Chore: update binary files for programming_section and programming_section.o`
+### 🧾 Commits Since v8.0.1
+- `72b6c71 Refactor: enhance house and registration type selection with menu options`
 
 ---
 
 ### 📁 Files Affected
-- `programming_section`
-- `programming_section.o`
 - `programming_section.pas`
 
 ---
