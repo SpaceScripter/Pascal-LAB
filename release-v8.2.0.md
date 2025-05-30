@@ -1,23 +1,25 @@
-### 📦 Release v8.1.0
+### 📦 Release v8.2.0
 
 **Release Date:** `2025-05-30`  
-**Tag:** `v8.1.0`  
+**Tag:** `v8.2.0`  
 **Status:** ✅ Stable  
 **Pushed By:** Joshua
 
 ---
 
 ### ✨ What's New
-- 🔧 Menu Selection System
+- 🔧 Clearing Screen after each student enters their data
 
 ---
 
-### 🧾 Commits Since v8.0.1
-- `72b6c71 Refactor: enhance house and registration type selection with menu options`
+### 🧾 Commits Since v8.1.0
+- `f97f011 Chore: update binary files for programming_section and programming_section.o`
 
 ---
 
 ### 📁 Files Affected
+- `programming_section`
+- `programming_section.o`
 - `programming_section.pas`
 
 ---
