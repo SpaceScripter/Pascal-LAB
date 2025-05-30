@@ -24,7 +24,7 @@ Begin
   Writeln('══════════════════════════════════════════════');
   Writeln;
 
-  For x := 1 To 1 Do
+  For x := 1 To 12 Do
   Begin
     Writeln('─[ Registering Student ', x, ' of 12 ]─');
 
