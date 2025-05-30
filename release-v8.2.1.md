@@ -1,25 +1,23 @@
-### 📦 Release v8.2.0
+### 📦 Release v8.2.1
 
 **Release Date:** `2025-05-30`  
-**Tag:** `v8.2.0`  
+**Tag:** `v8.2.1`  
 **Status:** ✅ Stable  
 **Pushed By:** Joshua
 
 ---
 
 ### ✨ What's New
-- 🔧 Clearing Screen after each student enters their data
+- 🔧 ASCII art removed
 
 ---
 
-### 🧾 Commits Since v8.1.0
-- `f97f011 Chore: update binary files for programming_section and programming_section.o`
+### 🧾 Commits Since v8.2.0
+- `816cac1 Refactor: standardize output formatting in registration summary`
 
 ---
 
 ### 📁 Files Affected
-- `programming_section`
-- `programming_section.o`
 - `programming_section.pas`
 
 ---
