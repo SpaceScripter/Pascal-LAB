@@ -1,5 +1,5 @@
 {Authors: Joshua Samuel, Shiva Beharry, Aadi Boodoosingh, Gerrard Ramcharan, Kemarley Pierre, Jahmarley Ellis
-  Date of completion: 2023-10-01
+  Date of completion: 30/05/2025
   Description: A simple sports registration system for a school.
   This program allows students to register for sports in different houses and types.}
 
