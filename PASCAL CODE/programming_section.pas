@@ -31,7 +31,7 @@ Begin
   {12} Writeln('-------------------------------------------------');
   {13} Writeln;
 
-  {14} For x := 1 To 12 Do
+  {14} For x := 1 To 1 Do
   Begin
     {15} Writeln('─[ Registering Student ', x, ' of 12 ]─');
 
@@ -128,28 +128,28 @@ Begin
   {74} Writeln('  ALPHA HOUSE');
   {75} Writeln('  Track Athletes: ', Trunc(alphaTrack / 50));
   {76} Writeln('  Field Athletes: ', Trunc(alphaField / 40));
-  {77} Writeln('  Total: $', totalAlpha:0:2);
+  {77} Writeln('  Total: $', totalAlpha:0:2, ' USD');
   {78} Writeln('-------------------------------------------------');
 
   {79} Writeln;
   {80} Writeln('  BETA HOUSE');
   {81} Writeln('  Track Athletes: ', Trunc(betaTrack / 50));
   {82} Writeln('  Field Athletes: ', Trunc(betaField / 40));
-  {83} Writeln('  Total: $', totalBeta:0:2);
+  {83} Writeln('  Total: $', totalBeta:0:2, ' USD');
   {84} Writeln('-------------------------------------------------');
 
   {85} Writeln;
   {86} Writeln('  DELTA HOUSE');
   {87} Writeln('  Track Athletes: ', Trunc(deltaTrack / 50));
   {88} Writeln('  Field Athletes: ', Trunc(deltaField / 40));
-  {89} Writeln('  Total: $', totalDelta:0:2);
+  {89} Writeln('  Total: $', totalDelta:0:2, ' USD');
   {90} Writeln('-------------------------------------------------');
 
   {91} Writeln;
   {92} Writeln('  GAMMA HOUSE');
   {93} Writeln('  Track Athletes: ', Trunc(gammaTrack / 50));
   {94} Writeln('  Field Athletes: ', Trunc(gammaField / 40));
-  {95} Writeln('  Total: $', totalGamma:0:2);
+  {95} Writeln('  Total: $', totalGamma:0:2, ' USD');
   {96} Writeln('-------------------------------------------------');
 
   {97} Writeln('-------------------------------------------------');
