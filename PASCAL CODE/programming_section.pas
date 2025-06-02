@@ -31,7 +31,7 @@ Begin
   {12} Writeln('-------------------------------------------------');
   {13} Writeln;
 
-  {14} For x := 1 To 1 Do
+  {14} For x := 1 To 12 Do
   Begin
     {15} Writeln('─[ Registering Student ', x, ' of 12 ]─');
 
