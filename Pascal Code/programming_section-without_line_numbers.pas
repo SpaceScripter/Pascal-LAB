@@ -29,7 +29,7 @@ Begin
   {9} gammaField := 0;
 
   {10} Writeln('-------------------------------------------------');
-  {11} Writeln('     Welcome to the Sports Registration       ');
+  {11} Writeln('     Welcome to the Sports Registration          ');
   {12} Writeln('-------------------------------------------------');
   {13} Writeln;
 
