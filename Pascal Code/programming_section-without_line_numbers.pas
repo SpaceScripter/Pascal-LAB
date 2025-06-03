@@ -51,7 +51,7 @@ Begin
       Writeln('  4. Gamma');
       Write('Enter choice (1-4): ');
       Readln(houseChoice);
-    Until ((houseChoice >= 1) And (houseChoice <= 4));
+    Until ((houseChoice >= 1) AND (houseChoice <= 4));
 
     Case houseChoice Of
       1: house := 'ALPHA';
@@ -67,7 +67,7 @@ Begin
       Writeln('  2. Field');
       Write('Enter choice (1-2): ');
       Readln(regChoice);
-    Until ((regChoice = 1) Or (regChoice = 2));
+    Until ((regChoice = 1) OR (regChoice = 2));
 
     { Update totals based on house and registration type }
     Case houseChoice Of
