@@ -10,8 +10,8 @@ Program SportsRegistrationSystem;
 Uses Crt;
 
 Var
-  x, houseChoice, regChoice: Integer;
-  id, name, house, regType: String;
+  x, houseChoice, regChoice, id: Integer;
+  name, house, regType: String;
   alphaTrack, alphaField, betaTrack, betaField: Real;
   deltaTrack, deltaField, gammaTrack, gammaField: Real;
   totalAlpha, totalBeta, totalDelta, totalGamma: Real;
