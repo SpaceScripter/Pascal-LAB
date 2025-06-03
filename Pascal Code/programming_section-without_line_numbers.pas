@@ -10,7 +10,7 @@ Uses Crt;
 
 Var
   x, houseChoice, regChoice, id: Integer;
-  name: String;
+  name, house: String;
   alphaTrack, alphaField, betaTrack, betaField: Real;
   deltaTrack, deltaField, gammaTrack, gammaField: Real;
   totalAlpha, totalBeta, totalDelta, totalGamma: Real;
@@ -53,6 +53,13 @@ Begin
       Readln(houseChoice);
     Until houseChoice in [1..4];
 
+    Case houseChoice Of
+      1: house := 'ALPHA';
+      2: house := 'BETA';
+      3: house := 'DELTA';
+      4: house := 'GAMMA';
+    End;
+
     { Registration Type Selection }
     Repeat
       Writeln('Select Registration Type:');
@@ -85,15 +92,7 @@ Begin
     { Confirmation }
     Writeln;
     Writeln('Registration Successful!');
-    Writeln('  Name : ', name);
-    Writeln('  House: ', 
-      Case houseChoice of
-        1: 'ALPHA';
-        2: 'BETA';
-        3: 'DELTA';
-        4: 'GAMMA';
-      End
-    );
+    Write('  Name : ', name, " - House", house);
 
     Writeln('-------------------------------------------------');
     Writeln;
