@@ -21,14 +21,16 @@ variables = [
     'alphaTrack', 'alphaField', 'betaTrack', 'betaField',
     'deltaTrack', 'deltaField', 'gammaTrack', 'gammaField',
     'x', 'id', 'name', 'houseChoice', 'house', 'regChoice', 'regType',
-    'totalAlpha', 'totalBeta', 'totalDelta', 'totalGamma'
+    'totalAlpha', 'totalBeta', 'totalDelta', 'totalGamma',
+    'totalAlphaPersons', 'totalBetaPersons', 'totalDeltaPersons', 'totalGammaPersons'
 ]
 state = {
     'alphaTrack': 0, 'alphaField': 0, 'betaTrack': 0, 'betaField': 0,
     'deltaTrack': 0, 'deltaField': 0, 'gammaTrack': 0, 'gammaField': 0,
     'x': None, 'id': None, 'name': None, 'houseChoice': None,
     'house': None, 'regChoice': None, 'regType': None,
-    'totalAlpha': None, 'totalBeta': None, 'totalDelta': None, 'totalGamma': None
+    'totalAlpha': None, 'totalBeta': None, 'totalDelta': None, 'totalGamma': None,
+    'totalAlphaPersons': None, 'totalBetaPersons': None, 'totalDeltaPersons': None, 'totalGammaPersons': None
 }
 
 # Store trace table rows: [line_number, variable_states, expected_output]
@@ -36,7 +38,7 @@ trace_table = []
 
 # Helper function to add a state to the trace table
 def add_state(line, output=""):
-    current_state = [line] + [state[var] for var in variables] + [output]
+    current_state = [line] + [state.get(var, None) for var in variables] + [output]
     trace_table.append(current_state)
 
 # Simulate the Pascal program
@@ -176,34 +178,40 @@ add_state(67, f"totalDelta := {state['deltaTrack']} + {state['deltaField']} = {s
 state['totalGamma'] = state['gammaTrack'] + state['gammaField']
 add_state(68, f"totalGamma := {state['gammaTrack']} + {state['gammaField']} = {state['totalGamma']}")
 
-# Summary (lines 69-100)
-add_state(69, "")
-add_state(70, "-------------------------------------------------")
-add_state(71, "           FINAL REGISTRATION SUMMARY            ")
-add_state(72, "-------------------------------------------------")
+# Compute total persons (lines 69-72)
+state['totalAlphaPersons'] = int(state['alphaTrack'] / 50) + int(state['alphaField'] / 40)
+add_state(69, f"totalAlphaPersons := {int(state['alphaTrack'] / 50)} + {int(state['alphaField'] / 40)} = {state['totalAlphaPersons']}")
+state['totalBetaPersons'] = int(state['betaTrack'] / 50) + int(state['betaField'] / 40)
+add_state(70, f"totalBetaPersons := {int(state['betaTrack'] / 50)} + {int(state['betaField'] / 40)} = {state['totalBetaPersons']}")
+state['totalDeltaPersons'] = int(state['deltaTrack'] / 50) + int(state['deltaField'] / 40)
+add_state(71, f"totalDeltaPersons := {int(state['deltaTrack'] / 50)} + {int(state['deltaField'] / 40)} = {state['totalDeltaPersons']}")
+state['totalGammaPersons'] = int(state['gammaTrack'] / 50) + int(state['gammaField'] / 40)
+add_state(72, f"totalGammaPersons := {int(state['gammaTrack'] / 50)} + {int(state['gammaField'] / 40)} = {state['totalGammaPersons']}")
+
+# Summary (lines 73-100)
 add_state(73, "")
-add_state(74, "  ALPHA HOUSE")
-add_state(75, f"  Track Athletes: {int(state['alphaTrack'] / 50)}")
-add_state(76, f"  Field Athletes: {int(state['alphaField'] / 40)}")
-add_state(77, f"  Total: ${state['totalAlpha']:0.2f}")
-add_state(78, "-------------------------------------------------")
-add_state(79, "")
-add_state(80, "  BETA HOUSE")
-add_state(81, f"  Track Athletes: {int(state['betaTrack'] / 50)}")
-add_state(82, f"  Field Athletes: {int(state['betaField'] / 40)}")
-add_state(83, f"  Total: ${state['totalBeta']:0.2f}")
-add_state(84, "-------------------------------------------------")
-add_state(85, "")
-add_state(86, "  DELTA HOUSE")
-add_state(87, f"  Track Athletes: {int(state['deltaTrack'] / 50)}")
-add_state(88, f"  Field Athletes: {int(state['deltaField'] / 40)}")
-add_state(89, f"  Total: ${state['totalDelta']:0.2f}")
-add_state(90, "-------------------------------------------------")
-add_state(91, "")
-add_state(92, "  GAMMA HOUSE")
-add_state(93, f"  Track Athletes: {int(state['gammaTrack'] / 50)}")
-add_state(94, f"  Field Athletes: {int(state['gammaField'] / 40)}")
-add_state(95, f"  Total: ${state['totalGamma']:0.2f}")
+add_state(74, "-------------------------------------------------")
+add_state(75, "           FINAL REGISTRATION SUMMARY            ")
+add_state(76, "-------------------------------------------------")
+add_state(77, "")
+add_state(78, "  ALPHA HOUSE")
+add_state(79, f"  Number of Persons in House: {state['totalAlphaPersons']}")
+add_state(80, f"  Total: ${state['totalAlpha']:0.2f} USD")
+add_state(81, "-------------------------------------------------")
+add_state(82, "")
+add_state(83, "  BETA HOUSE")
+add_state(84, f"  Number of Persons in House: {state['totalBetaPersons']}")
+add_state(85, f"  Total: ${state['totalBeta']:0.2f} USD")
+add_state(86, "-------------------------------------------------")
+add_state(87, "")
+add_state(88, "  DELTA HOUSE")
+add_state(89, f"  Number of Persons in House: {state['totalDeltaPersons']}")
+add_state(90, f"  Total: ${state['totalDelta']:0.2f} USD")
+add_state(91, "-------------------------------------------------")
+add_state(92, "")
+add_state(93, "  GAMMA HOUSE")
+add_state(94, f"  Number of Persons in House: {state['totalGammaPersons']}")
+add_state(95, f"  Total: ${state['totalGamma']:0.2f} USD")
 add_state(96, "-------------------------------------------------")
 add_state(97, "-------------------------------------------------")
 add_state(98, "      Thank you for using the system. Goodbye!   ")

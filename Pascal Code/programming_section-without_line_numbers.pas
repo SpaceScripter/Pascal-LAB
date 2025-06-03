@@ -14,6 +14,7 @@ Var
   alphaTrack, alphaField, betaTrack, betaField: Real;
   deltaTrack, deltaField, gammaTrack, gammaField: Real;
   totalAlpha, totalBeta, totalDelta, totalGamma: Real;
+  totalAlphaPersons, totalBetaPersons, totalDeltaPersons, totalGammaPersons: Integer;
 
 Begin
   {1} ClrScr;
@@ -118,37 +119,38 @@ Begin
   {67} totalDelta := deltaTrack + deltaField;
   {68} totalGamma := gammaTrack + gammaField;
 
+  {69} totalAlphaPersons := Trunc(alphaTrack / 50) + Trunc(alphaField / 40);
+  {70} totalBetaPersons := Trunc(betaTrack / 50) + Trunc(betaField / 40);
+  {71} totalDeltaPersons := Trunc(deltaTrack / 50) + Trunc(deltaField / 40);
+  {72} totalGammaPersons := Trunc(gammaTrack / 50) + Trunc(gammaField / 40);
+
   {Summary}
-  {69} Writeln;
-  {70} Writeln('-------------------------------------------------');
-  {71} Writeln('           FINAL REGISTRATION SUMMARY            ');
-  {72} Writeln('-------------------------------------------------');
-
   {73} Writeln;
-  {74} Writeln('  ALPHA HOUSE');
-  {75} Writeln('  Track Athletes: ', Trunc(alphaTrack / 50));
-  {76} Writeln('  Field Athletes: ', Trunc(alphaField / 40));
-  {77} Writeln('  Total: $', totalAlpha:0:2, ' USD');
-  {78} Writeln('-------------------------------------------------');
+  {74} Writeln('-------------------------------------------------');
+  {75} Writeln('           FINAL REGISTRATION SUMMARY            ');
+  {76} Writeln('-------------------------------------------------');
 
-  {79} Writeln;
-  {80} Writeln('  BETA HOUSE');
-  {81} Writeln('  Track Athletes: ', Trunc(betaTrack / 50));
-  {82} Writeln('  Field Athletes: ', Trunc(betaField / 40));
-  {83} Writeln('  Total: $', totalBeta:0:2, ' USD');
-  {84} Writeln('-------------------------------------------------');
+  {77} Writeln;
+  {78} Writeln('  ALPHA HOUSE');
+  {79} Writeln('  Number of Persons in House: ', totalAlphaPersons);
+  {80} Writeln('  Total: $', totalAlpha:0:2, ' USD');
+  {81} Writeln('-------------------------------------------------');
 
-  {85} Writeln;
-  {86} Writeln('  DELTA HOUSE');
-  {87} Writeln('  Track Athletes: ', Trunc(deltaTrack / 50));
-  {88} Writeln('  Field Athletes: ', Trunc(deltaField / 40));
-  {89} Writeln('  Total: $', totalDelta:0:2, ' USD');
-  {90} Writeln('-------------------------------------------------');
+  {82} Writeln;
+  {83} Writeln('  BETA HOUSE');
+  {84} Writeln('  Number of Persons in House: ', totalBetaPersons);
+  {85} Writeln('  Total: $', totalBeta:0:2, ' USD');
+  {86} Writeln('-------------------------------------------------');
 
-  {91} Writeln;
-  {92} Writeln('  GAMMA HOUSE');
-  {93} Writeln('  Track Athletes: ', Trunc(gammaTrack / 50));
-  {94} Writeln('  Field Athletes: ', Trunc(gammaField / 40));
+  {87} Writeln;
+  {88} Writeln('  DELTA HOUSE');
+  {89} Writeln('  Number of Persons in House: ', totalDeltaPersons);
+  {90} Writeln('  Total: $', totalDelta:0:2, ' USD');
+  {91} Writeln('-------------------------------------------------');
+
+  {92} Writeln;
+  {93} Writeln('  GAMMA HOUSE');
+  {94} Writeln('  Number of Persons in House: ', totalGammaPersons);
   {95} Writeln('  Total: $', totalGamma:0:2, ' USD');
   {96} Writeln('-------------------------------------------------');
 
