@@ -20,10 +20,14 @@ Begin
   ClrScr;
 
   { Initialize all totals }
-  alphaTrack := 0; alphaField := 0;
-  betaTrack := 0;  betaField := 0;
-  deltaTrack := 0; deltaField := 0;
-  gammaTrack := 0; gammaField := 0;
+  alphaTrack := 0; 
+  alphaField := 0;
+  betaTrack := 0;  
+  betaField := 0;
+  deltaTrack := 0; 
+  deltaField := 0;
+  gammaTrack := 0; 
+  gammaField := 0;
 
   Writeln('-------------------------------------------------');
   Writeln('     Welcome to the Sports Registration          ');
