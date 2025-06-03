@@ -1,5 +1,5 @@
 {Authors: Joshua Samuel, Shiva Beharry, Aadi Boodoosingh, Gerrard Ramcharan, Kemarley Pierre, Jahmarley Ellis
-  Date of completion: 30/05/2025
+  Date of completion: 3/06/2025
 
   Description: A simple sports registration system for a school.
   This program allows students to register for sports in different houses and types.}
@@ -67,7 +67,7 @@ Begin
       Writeln('  2. Field');
       Write('Enter choice (1-2): ');
       Readln(regChoice);
-    Until ((regChoice = 1) OR (regChoice = 2));
+    Until (regChoice = 1) OR (regChoice = 2);
 
     { Update totals based on house and registration type }
     Case houseChoice Of
