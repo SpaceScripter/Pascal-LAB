@@ -139,7 +139,7 @@ Begin
   Writeln('  Number of Persons in House: ', totalGammaPersons);
   Writeln('  Total: $', totalGamma:0:2, ' USD');
   Writeln('-------------------------------------------------');
-
+  Writeln;
   Writeln('-------------------------------------------------');
   Writeln('      Thank you for using the system. Goodbye!   ');
   Writeln('-------------------------------------------------');
