@@ -17,7 +17,6 @@ Var
   totalAlphaPersons, totalBetaPersons, totalDeltaPersons, totalGammaPersons: Integer;
 
 Begin
-  ClrScr;
 
   { Initialize all totals }
   alphaTrack := 0; 
@@ -95,8 +94,7 @@ Begin
         4: 'GAMMA';
       End
     );
-    
-    ClrScr;
+
     Writeln('-------------------------------------------------');
     Writeln;
   End;
