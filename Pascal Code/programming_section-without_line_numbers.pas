@@ -19,10 +19,14 @@ Var
 
 Begin
   {1} ClrScr;
-  {2} alphaTrack := 0;  alphaField := 0;
-  {3} betaTrack := 0;   betaField := 0;
-  {4} deltaTrack := 0;  deltaField := 0;
-  {5} gammaTrack := 0;  gammaField := 0;
+  {2} alphaTrack := 0; 
+  {3} alphaField := 0;
+  {4} betaTrack := 0; 
+  {5} betaField := 0;
+  {6} deltaTrack := 0; 
+  {7} deltaField := 0;
+  {8} gammaTrack := 0; 
+  {9} gammaField := 0;
 
   {10} Writeln('-------------------------------------------------');
   {11} Writeln('     Welcome to the Sports Registration       ');
