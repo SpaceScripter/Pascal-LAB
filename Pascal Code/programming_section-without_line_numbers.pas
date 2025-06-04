@@ -127,6 +127,7 @@ Begin
   Writeln('-------------------------------------------------');
   Writeln;
   Writeln('-------------------------------------------------');
+  Writeln;
   Writeln('      Thank you for using the system. Goodbye!   ');
   Writeln('-------------------------------------------------');
   Readkey;
