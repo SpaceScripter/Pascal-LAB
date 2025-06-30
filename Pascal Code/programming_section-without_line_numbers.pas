@@ -1,8 +1,19 @@
-{Authors: Joshua Samuel, Shiva Beharry, Aadi Boodoosingh, Gerrard Ramcharan, Kemarley Pierre, Jahmarley Ellis
-  Date of completion: 3/06/2025
+{
+  - Authors:
+      * Joshua Samuel
+      * Shiva Beharry
+      * Aadi Boodoosingh
+      * Gerrard Ramcharan
+      * Kemarley Pierre
+      * Jahmarley Ellis
 
-  Description: A simple sports registration system for a school.
-  This program allows students to register for sports in different houses and types.}
+  - Date of Completion: 3/06/2025
+
+  - Description:
+      * A simple sports registration system for a school.
+      * This program allows students to register for sports
+        in different houses and types.
+}
 Program SportsRegistrationSystem;
 Uses Crt;
 Var

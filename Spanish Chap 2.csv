@@ -1,0 +1,322 @@
+Front,Back
+El balón,The ball
+La sala,Living room
+Sillón,Armchair
+Librero,Bookcase
+Sofá,Sofa
+La televisión / el televisor,Television
+El baño,Bathroom
+El fregadero,Sink
+La mesa,Table
+La silla,Chair
+La cuchara,Spoon
+El tenedor,Fork
+La tetera,Teapot
+La taza,Cup
+El congelador,Freezer
+La habitación,Room
+El estudio,Study
+El comedor,Dining room
+El pasillo,Hall
+El garaje,Garage
+El jardín,Garden
+El techo,Ceiling
+Las escaleras,Stairs
+Abajo,Downstairs
+Arriba,Upstairs
+El césped,Lawn
+El tejado,Roof
+La aspiradora,Vacuum cleaner
+La escoba,Broom
+El sartén,Frying pan
+El vaso,Glass
+El cuchillo,Knife
+El refrigerador,Refrigerator
+El lavaplatos líquido,Dishwashing liquid
+El tostador,Toaster
+La cucharilla,Teaspoon
+La licuadora,Blender
+Arreglar,To tidy/arrange
+Limpiar la casa,To clean the house
+Barrer el suelo,To sweep the floor
+Limpiar el piso,To mop
+Cocinar,To cook
+Pasar la aspiradora,To vacuum
+Cortar el césped,To cut the lawn
+Planchar la ropa,To iron the clothes
+Ensuciar,To dirty
+Poner la mesa,To set the table
+Fregar,To scrub
+Quitar la mesa,To clear the table
+Hacer quehaceres,To do chores
+Quitar el polvo,To dust
+Arreglar la cama,To make the bed
+Sacudir los muebles,To clean the furniture
+Lavar los platos,To wash the dishes
+Sacar la basura,To take out the garbage
+El cereal,Cereal
+La leche,Milk
+La mantequilla,Butter
+El pan,Bread
+El pan tostado,Toast
+El pan dulce,Sweet bread
+El tocino,Bacon
+El jamón,Ham
+La salchicha,Sausage
+El jugo,Juice
+El café,Coffee
+El té,Tea
+El agua,Water
+El yogurt,Yogurt
+La avena,Oatmeal
+Las frutas,Fruits
+El queso,Cheese
+Los huevos fritos,Fried eggs
+La tortilla,Omelette
+El vanqueque,Pancake
+La mermelada,Jam
+El chocolate,Hot chocolate
+La banana,Banana
+El pan de fruta,Breadfruit
+El gofre,Waffle
+La toronja,Grapefruit
+La naranja,Orange
+La piña,Pineapple
+La tostada francesa,French toast
+Las fresas,Strawberries
+La manzana,Apple
+Las uvas,Grapes
+La berenjena,Eggplant
+La caña de azúcar,Sugar cane
+El caimito,Star apple
+El tamarindo,Tamarind
+El aguacate,Avocado
+La calabaza,Pumpkin
+La carne,Meat
+El pollo,Chicken
+El pollo asado,Roast chicken
+La res,Beef
+El cerdo,Pork
+El arroz,Rice
+La batata,Sweet potato
+Las malangas,Eddoes
+El ñame,Yam
+La yuca,Cassava
+El postre,Dessert
+El helado,Ice cream
+La torta,Cake
+El hielo,Ice
+El cangrejo,Crab
+El camarón,Shrimp
+El agutí,Agouti
+La carne de cabra,Goat
+El tiburón,Shark
+El quingombó,Okra/Ochro
+La langosta,Lobster
+Sano,Healthy (masculine singular)
+Sana,Healthy (feminine singular)
+Sanos,Healthy (masculine plural)
+Sanas,Healthy (feminine plural)
+Grasoso,Oily
+Fresco,Fresh
+Crudo,Raw
+Suculento,Succulent
+Asqueroso,Disgusting
+Nutritivo,Nutritious/Healthy
+Bueno,Good
+Rico / delicioso,Delicious
+Ligero,Light
+Salado,Salty
+Jugoso,Juicy
+Desabrido,Bland
+Azucarado,Sugary
+Barato,Cheap
+Caro,Expensive
+Picante,Spicy
+¡Espere!,Wait! (usted)
+¡Esperen!,Wait! (ustedes)
+¡Beba!,Drink! (usted)
+¡Beban!,Drink! (ustedes)
+¡Escriba!,Write! (usted)
+¡Escriban!,Write! (ustedes)
+¡No espere!,Do not wait! (usted)
+¡No esperen!,Do not wait! (ustedes)
+¡No beba!,Do not drink! (usted)
+¡No beban!,Do not drink! (ustedes)
+¡No escriba!,Do not write! (usted)
+¡No escriban!,Do not write! (ustedes)
+¡Diga!,Say! (usted)
+¡Digan!,Say! (ustedes)
+¡Haga!,Do! (usted)
+¡Hagan!,Do! (ustedes)
+¡Tenga!,Have! (usted)
+¡Tengan!,Have! (ustedes)
+¡Duerma!,Sleep! (usted)
+¡Duerman!,Sleep! (ustedes)
+¡Vaya!,Go! (usted)
+¡Vayan!,Go! (ustedes)
+¡No diga!,Do not say! (usted)
+¡No digan!,Do not say! (ustedes)
+¡No haga!,Do not do! (usted)
+¡No hagan!,Do not do! (ustedes)
+¡No tenga!,Do not have! (usted)
+¡No tengan!,Do not have! (ustedes)
+¡No duerma!,Do not sleep! (usted)
+¡No duerman!,Do not sleep! (ustedes)
+¡No vaya!,Do not go! (usted)
+¡No vayan!,Do not go! (ustedes)
+¡Mira!,Look! (tú)
+¡Espera!,Wait! (tú)
+¡Habla!,Speak! (tú)
+¡Camina!,Walk! (tú)
+¡Lava!,Wash! (tú)
+¡Di!,Say! (tú)
+¡Sal!,Leave! (tú)
+¡Haz!,Do! (tú)
+¡Ve!,Go! (tú)
+¡Ten!,Have! (tú)
+¡No mires!,Do not look! (tú)
+¡No esperes!,Do not wait! (tú)
+¡No hables!,Do not speak! (tú)
+¡No camines!,Do not walk! (tú)
+¡No laves!,Do not wash! (tú)
+¡No digas!,Do not say! (tú)
+¡No salgas!,Do not leave! (tú)
+¡No hagas!,Do not do! (tú)
+¡No vayas!,Do not go! (tú)
+¡No tengas!,Do not have! (tú)
+¡Pide!,Ask for! (tú)
+¡No pidas!,Do not ask for! (tú)
+¡Pida!,Ask for! (usted)
+¡No pida!,Do not ask for! (usted)
+¡Pidan!,Ask for! (ustedes)
+¡No pidan!,Do not ask for! (ustedes)
+¡Duerme!,Sleep! (tú)
+¡No duermas!,Do not sleep! (tú)
+¡Levántate!,Get up! (tú reflexive)
+¡No te levantes!,Do not get up! (tú reflexive)
+¡Levántese!,Get up! (usted reflexive)
+¡No se levante!,Do not get up! (usted reflexive)
+¡Levántense!,Get up! (ustedes reflexive)
+¡No se levanten!,Do not get up! (ustedes reflexive)
+¡Paga!,Pay! (tú)
+¡No pagues!,Do not pay! (tú)
+¡Pague!,Pay! (usted)
+¡No pague!,Do not pay! (usted)
+¡Paguen!,Pay! (ustedes)
+¡No paguen!,Do not pay! (ustedes)
+¡Escoge!,Choose! (tú)
+¡No escojas!,Do not choose! (tú)
+¡Escoja!,Choose! (usted)
+¡No escoja!,Do not choose! (usted)
+¡Escojan!,Choose! (ustedes)
+¡No escojan!,Do not choose! (ustedes)
+¡Practica!,Practice! (tú)
+¡No practiques!,Do not practice! (tú)
+¡Practique!,Practice! (usted)
+¡No practique!,Do not practice! (usted)
+¡Practiquen!,Practice! (ustedes)
+¡No practiquen!,Do not practice! (ustedes)
+¡Cruza!,Cross! (tú)
+¡No cruces!,Do not cross! (tú)
+¡Cruce!,Cross! (usted)
+¡No cruce!,Do not cross! (usted)
+¡Crucen!,Cross! (ustedes)
+¡No crucen!,Do not cross! (ustedes)
+¡Elige!,Select! (tú)
+¡No elijas!,Do not select! (tú)
+¡Elija!,Select! (usted)
+¡No elija!,Do not select! (usted)
+¡Elijan!,Select! (ustedes)
+¡No elijan!,Do not select! (ustedes)
+¡Sigue!,Follow! (tú)
+¡No sigas!,Do not follow! (tú)
+¡Siga!,Follow! (usted)
+¡No siga!,Do not follow! (usted)
+¡Sigan!,Follow! (ustedes)
+¡No sigan!,Do not follow! (ustedes)
+¡Conoce!,Know! (tú)
+¡No conozcas!,Do not know! (tú)
+¡Conozca!,Know! (usted)
+¡No conozca!,Do not know! (usted)
+¡Conozcan!,Know! (ustedes)
+¡No conozcan!,Do not know! (ustedes)
+¡Conduce!,Drive! (tú)
+¡No conduzcas!,Do not drive! (tú)
+¡Conduzca!,Drive! (usted)
+¡No conduzca!,Do not drive! (usted)
+¡Conduzcan!,Drive! (ustedes)
+¡No conduzcan!,Do not drive! (ustedes)
+¡Trae!,Bring! (tú)
+¡No traigas!,Do not bring! (tú)
+¡Traiga!,Bring! (usted)
+¡No traiga!,Do not bring! (usted)
+¡Traigan!,Bring! (ustedes)
+¡No traigan!,Do not bring! (ustedes)
+¡Ven!,Come! (tú)
+¡No vengas!,Do not come! (tú)
+¡Venga!,Come! (usted)
+¡No venga!,Do not come! (usted)
+¡Vengan!,Come! (ustedes)
+¡No vengan!,Do not come! (ustedes)
+¡Huele!,Smell! (tú)
+¡No huelas!,Do not smell! (tú)
+¡Huela!,Smell! (usted)
+¡No huela!,Do not smell! (usted)
+¡Huelan!,Smell! (ustedes)
+¡No huelan!,Do not smell! (ustedes)
+¡Sé!,Be! (tú)
+¡No seas!,Do not be! (tú)
+¡Sea!,Be! (usted)
+¡No sea!,Do not be! (usted)
+¡Sean!,Be! (ustedes)
+¡No sean!,Do not be! (ustedes)
+¡Oye!,Hear! (tú)
+¡No oigas!,Do not hear! (tú)
+¡Oiga!,Hear! (usted)
+¡No oiga!,Do not hear! (usted)
+¡Oigan!,Hear! (ustedes)
+¡No oigan!,Do not hear! (ustedes)
+¡Da!,Give! (tú)
+¡No des!,Do not give! (tú)
+¡Dé!,Give! (usted)
+¡No dé!,Do not give! (usted)
+¡Den!,Give! (ustedes)
+¡No den!,Do not give! (ustedes)
+Este,This (masculine singular)
+Esta,This (feminine singular)
+Estos,These (masculine plural)
+Estas,These (feminine plural)
+Ese,That (masculine singular)
+Esa,That (feminine singular)
+Esos,Those (masculine plural)
+Esas,Those (feminine plural)
+Aquel,That (masculine singular, far)
+Aquélla,That (feminine singular, far)
+Aquellos,Those (masculine plural, far)
+Aquéllas,Those (feminine plural, far)
+Esto,This (neuter)
+Eso,That (neuter)
+Aquello,That (neuter, far)
+Éste,This one (masculine singular pronoun)
+Ésta,This one (feminine singular pronoun)
+Éstos,These (masculine plural pronoun)
+Éstas,These (feminine plural pronoun)
+Ése,That one (masculine singular pronoun)
+Ésa,That one (feminine singular pronoun)
+Ésos,Those (masculine plural pronoun)
+Ésas,Those (feminine plural pronoun)
+Aquéll,That one (masculine singular pronoun, far)
+Aquélla,That one (feminine singular pronoun, far)
+Aquéllos,Those (masculine plural pronoun, far)
+Aquéllas,Those (feminine plural pronoun, far)
+No,Not
+Nada,Nothing
+Nunca,Never
+Jamás,Never (stronger)
+Tampoco,Neither
+Nadie,Nobody
+Ya no,No longer
+En absoluto,Not at all
+De ningún modo,In no way
+En/por
