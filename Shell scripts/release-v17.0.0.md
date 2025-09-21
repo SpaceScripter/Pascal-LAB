@@ -1,24 +1,27 @@
-### 📦 Release v16.0.0
+### 📦 Release v17.0.0
 
 **Release Date:** `2025-09-21`  
-**Tag:** `v16.0.0`  
+**Tag:** `v17.0.0`  
 **Status:** ✅ Stable  
 **Pushed By:** Joshua
 
 ---
 
 ### ✨ What's New
-- 🔧 Basically finished
+- 🔧 Forgot to Commit
 
 ---
 
-### 🧾 Commits Since v15.0.1
-- ``
+### 🧾 Commits Since v16.0.0
+- `eae8c59 Fixes`
 
 ---
 
 ### 📁 Files Affected
-- ``
+- `.DS_Store`
+- `Help/help.py`
+- `Python tracers/pytracer.py`
+- `Python tracers/trace_table_updated.csv`
 
 ---
 
