@@ -1,18 +1,18 @@
-### 📦 Release v15.0.1
+### 📦 Release v16.0.0
 
-**Release Date:** `2025-09-20`  
-**Tag:** `v15.0.1`  
+**Release Date:** `2025-09-21`  
+**Tag:** `v16.0.0`  
 **Status:** ✅ Stable  
-**Pushed By:** JOsh
+**Pushed By:** Joshua
 
 ---
 
 ### ✨ What's New
-- 🔧 Updating stuff
+- 🔧 Basically finished
 
 ---
 
-### 🧾 Commits Since v15.0.0
+### 🧾 Commits Since v15.0.1
 - ``
 
 ---
